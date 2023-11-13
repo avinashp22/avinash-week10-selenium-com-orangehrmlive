@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class ComOrangehrmlive {
 
-    static String browser = "chrome"; // choose browser
+    static String browser = "edge"; // choose browser
     static WebDriver driver; // declare globally
 
     public static void main(String[] args) {
@@ -31,22 +31,22 @@ public class ComOrangehrmlive {
         System.out.println(driver.getTitle()); // print tile
         System.out.println(driver.getCurrentUrl()); // print current url
         System.out.println(driver.getPageSource()); // print page source
-        WebElement forgotLink = driver.findElement(By.linkText("ForGOTPW")); // hover to forgot pw link
+        WebElement forgotLink = driver.findElement(By.linkText("Forgot your password?")); // hover to forgot pw link
         forgotLink.click(); // click on link
         System.out.println(driver.getCurrentUrl()); // print current url
         driver.navigate().back(); // go back a page to login page
         driver.navigate().refresh(); // refresh url
 
-        WebElement email = driver.findElement(By.id("Email"));    //find email field and enter email by ID
-        email.sendKeys("avi@patel.com");   // type into box, action
+        WebElement email = driver.findElement(By.name("username"));    //find email field and enter email by ID
+        email.sendKeys("Admin");   // type into box, action
 
-        WebElement password = driver.findElement(By.id("Password"));       //find password field and enter password by ID
-        password.sendKeys("Halllo123");    // type into box, action
+        WebElement password = driver.findElement(By.name("password"));       //find password field and enter password by ID
+        password.sendKeys("admin123");    // type into box, action
 
-        WebElement loginLink = driver.findElement(By.linkText("LOG IN")); // hover to login button
+        WebElement loginLink = driver.findElement(By.className("oxd-button oxd-button--medium oxd-button--main orangehrm-login-button")); // hover to login button
         loginLink.click(); // click on link
 
-        driver.quit();  // close browser
+       // driver.quit();  // close browser
     }
 }
 
