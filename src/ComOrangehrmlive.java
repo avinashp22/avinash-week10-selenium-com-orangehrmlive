@@ -46,7 +46,7 @@ public class ComOrangehrmlive {
         WebElement loginLink = driver.findElement(By.className("oxd-button oxd-button--medium oxd-button--main orangehrm-login-button")); // hover to login button
         loginLink.click(); // click on link
 
-       // driver.quit();  // close browser
+       driver.quit();  // close browser
     }
 }
 
