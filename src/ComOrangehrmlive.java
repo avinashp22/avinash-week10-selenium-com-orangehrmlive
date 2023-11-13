@@ -1,3 +1,19 @@
+/**
+ * 1. Setup chrome browser.
+ * 2. Open URL.
+ * 3. Print the title of the page.
+ * 4. Print the current url.
+ * 5. Print the page source.
+ * 6. Click on ‘Forgot your password?’ link.
+ * 7. Print the current url.
+ * 8. Navigate back to the login page.
+ * 9. Refresh the page.
+ * 10. Enter the email to email field.
+ * 11. Enter the password to password field.
+ * 12. Click on Login Button.
+ * 13. Close the browser.
+ */
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +25,7 @@ import java.time.Duration;
 
 public class ComOrangehrmlive {
 
-    static String browser = "firefox"; // choose browser
+    static String browser = "edge"; // choose browser
     static WebDriver driver; // declare globally
 
     public static void main(String[] args) {
@@ -58,7 +74,7 @@ public class ComOrangehrmlive {
         WebElement loginLink2 = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")); // hover to login button
         loginLink2.click(); // click on link
 
-       driver.quit();  // close browser
+      driver.quit();  // close browser
     }
 }
 
