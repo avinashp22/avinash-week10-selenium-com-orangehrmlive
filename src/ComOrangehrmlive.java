@@ -31,8 +31,14 @@ public class ComOrangehrmlive {
         System.out.println(driver.getTitle()); // print tile
         System.out.println(driver.getCurrentUrl()); // print current url
         System.out.println(driver.getPageSource()); // print page source
+
+
         // NOT WORKING -  WebElement forgotLink = driver.findElement(By.linkText("Forgot your password?")); // hover to forgot pw link
         // NOT WORKING -   forgotLink.click(); // click on link
+
+        WebElement forgotLink = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[4]/p")); // hover to forgot pw link
+       forgotLink.click(); // click on link
+
         System.out.println(driver.getCurrentUrl()); // print current url
         driver.navigate().back(); // go back a page to login page
         driver.navigate().refresh(); // refresh url
@@ -49,6 +55,8 @@ public class ComOrangehrmlive {
        // NOT WORKING -  WebElement loginLink2 = driver.findElement(By.linkText("Login")); // hover to login button
         // NOT WORKING -   loginLink2.click(); // click on link
 
+        WebElement loginLink2 = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")); // hover to login button
+        loginLink2.click(); // click on link
 
        driver.quit();  // close browser
     }
